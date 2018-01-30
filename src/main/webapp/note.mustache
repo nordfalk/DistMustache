@@ -1,0 +1,14 @@
+
+{{#noter}}
+    <li>{{tekst}}
+        <Form method="post">
+        <button type="button" onclick="deleteNote({{id}});">Slet note</button>
+    </Form>
+    </li>
+{{/noter}}
+</ul>
+<Form method="post">
+    <input id = "input" name="note" type ="text">
+    <button type="button" onclick="createNote('input')">Ny Note</button>
+</Form>
+
