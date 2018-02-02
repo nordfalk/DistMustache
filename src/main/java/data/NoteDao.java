@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 public class NoteDao {
+
+  public static final NoteDao instans = new NoteDao();
+  static {instans.saveNote("test");}
+
     private Map<Integer, Note> noter = new HashMap<>();
     private static int nextId = 0;
 

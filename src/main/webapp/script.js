@@ -1,5 +1,7 @@
 //Fetches notes from server as a JSON array
 function loadNotes(){
+    // Bemærk - koden virker ikke på IE.
+    // Se https://caniuse.com/#search=fetch
     fetch("rest/noterest").then(function(noteresponse){
         //extracts json object
         noteresponse.json().then((function(notes){

@@ -11,8 +11,7 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class NoteRest {
-    private static NoteDao noteDao = new NoteDao();
-    static {noteDao.saveNote("test");}
+    private static NoteDao noteDao = NoteDao.instans;
 
     @GET
     public List<Note> getNotes(){

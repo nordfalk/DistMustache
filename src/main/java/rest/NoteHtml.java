@@ -15,9 +15,7 @@ import java.util.Map;
 
 @Path("notehtml")
 public class NoteHtml {
-    private static Map<Integer,Note> noter = new HashMap<>(); //Database mock
-    private static int nextid = 0; //Autoincrement
-    private static NoteDao noteDao= new NoteDao();
+    private static NoteDao noteDao = NoteDao.instans;
 
     @GET
     public String getNoter() throws IOException {
